@@ -58,7 +58,7 @@ end
 
 -- Check if this unit should be color shifted. Check leaders and loyal units
 local function should_exclude(unit)
-    if wml.variables.modification_scale_randomizer_no_loyal then
+    if wml.variables.modification_randomizer_no_loyal then
 		if unit.canrecruit then -- Leader
 			return true
 		end
@@ -76,7 +76,7 @@ end
 
 -- Check if unusual colors are allowed
 local function are_unusual_colors_enabled()
-	return wml.variables.modification_scale_randomizer_morphing
+	return wml.variables.modification_randomizer_morphing
 end
 
 --------------------------------------------------------------------------------
@@ -152,6 +152,9 @@ local function get_weighted_choice(variants, affinity_modifiers, allow_rare, uni
         weight = weight + umc_adjustment
         
 		if umc_adjustment == 0 and override_others == false and	data.rare and not allow_rare then
+			weight = 0
+		end
+		if umc_adjustment == 0 and override_others == false and	should_exclude(unit) then
 			weight = 0
 		end
 		
@@ -301,7 +304,7 @@ local on_event = wesnoth.require("on_event")
 -- Handle a unit being spawned/recruited/recalled.
 on_event("unit placed", function(ctx)
     local unit = wesnoth.units.get(ctx.x1, ctx.y1)
-    if not unit or should_exclude(unit) then 
+    if not unit then 
 		return
 	end
     
@@ -326,7 +329,7 @@ end)
 -- Handle a unit leveling up.
 on_event("post advance", function(ctx)
     local unit = wesnoth.units.get(ctx.x1, ctx.y1)
-    if not unit or should_exclude(unit) then 
+    if not unit then 
 		return
 	end
 	
