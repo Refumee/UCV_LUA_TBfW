@@ -202,7 +202,7 @@ local body_parts = {
 			},
 
 			inferno = {
-				unit_types = { "Inferno Drake", "Afterlife Inferno Drake2" },
+				unit_types = { "Inferno Drake", "Afterlife Inferno Drake" },
 				BASE = { frequency = 1.0, colors = "4C3324,F55711,FFF200" },
 				ALBINO = { frequency = 0.0, colors = "414141,FF0000,FF7762" },
 			},
