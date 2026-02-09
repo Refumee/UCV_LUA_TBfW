@@ -188,15 +188,15 @@ local body_parts = {
 
 			burner = {
 				unit_types = { 
-					"Drake Burner", "Drake Flare", "Drake Flameheart", "Afterlife Drake Burner2", 
-					"Afterlife Drake Flare2", "Afterlife Drake Flameheart2" 
+					"Drake Burner", "Drake Flare", "Drake Flameheart", "Afterlife Drake Burner", 
+					"Afterlife Drake Flare", "Afterlife Drake Flameheart" 
 				},
 				BASE = { frequency = 1.0, colors = "F3A62C,FFF200,F7DF8E,C79962" },
 				ALBINO = { frequency = 0.0, colors = "FF0000,FF7762,DEDEDE,A4988F" },
 			},
 
 			fire = {
-				unit_types = { "Fire Drake", "Afterlife Fire Drake2" },
+				unit_types = { "Fire Drake", "Afterlife Fire Drake" },
 				BASE = { frequency = 1.0, colors = "DEB099,F3A62C,D1E997,FDE9F1,C79962" },
 				ALBINO = { frequency = 0.0, colors = "989898,FF0000,FF7762,DEDEDE,A4988F" },
 			},
