@@ -113,8 +113,8 @@ local function get_umc_modifiers(unit, body_part, variant)
 		-- Check override for all variants that fulfill the sides/races/body_parts criteria
 		if applies and cfg.override_others and (cfg.override_others == true or cfg.override_others == "yes" or cfg.override_others == "true") then
 			override = true
-		end
-		
+        end
+
 		if cfg.variants then
             applies = applies and is_in_list(variant, tostring(cfg.variants))
 		else
@@ -136,18 +136,7 @@ local function get_weighted_choice(variants, affinity_modifiers, allow_rare, uni
     local total_weight = 0
 	
     for variant, data in pairs(variants) do
-		--ignores the rarity check if there is frequency change
-		if wml.variables["UCV_change_color_frequency"] then
-			goto ignore_rare
-		else
-			--rarity check, if the player wants rare colors
-			if data.rare and not allow_rare then
-				goto continue
-			end
-        end
-		
-		::ignore_rare::
-		
+	
         local weight = data.frequency or 1.0
         
 		-- Apply affinity modifiers from previous parts
@@ -162,13 +151,16 @@ local function get_weighted_choice(variants, affinity_modifiers, allow_rare, uni
         end
         weight = weight + umc_adjustment
         
+		if umc_adjustment == 0 and override_others == false and	data.rare and not allow_rare then
+			weight = 0
+		end
+		
 		-- Add variant to the pool of options
         if weight > 0 then
             table.insert(pool, {variant = variant, data = data, weight = weight})
             total_weight = total_weight + weight
         end
-		
-		::continue::
+
     end
 	
     if total_weight <= 0 then 
