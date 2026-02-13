@@ -310,13 +310,16 @@ on_event("unit placed", function(ctx)
     
     -- Skip if it already has a color shift
     local modifications = wml.get_child(unit.__cfg, "modifications")
-    if modifications then
-        for adv in wml.child_range(modifications, "object") do
-            if adv.ucv_color_id then 
-				return
+	
+	if modifications then
+		for obj in wml.child_range(modifications, "object") do
+			for eff in wml.child_range(obj, "effect") do
+				if eff.apply_to == "image_mod" then
+					return
+				end
 			end
-        end
-    end
+		end
+	end
 	
 	local allow_rare = are_unusual_colors_enabled()
 	
