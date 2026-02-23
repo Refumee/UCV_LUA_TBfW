@@ -13,7 +13,8 @@ local body_parts = {
 					"Afterlife Dragoon", "Afterlife Spearman", "Afterlife Master at Arms", "Bowman", "Afterlife Swordsman", 
 					"Afterlife General", "Afterlife Longbowman", "Afterlife Grand Marshal", "Afterlife Sergeant", 
 					"Afterlife Lieutenant", "Afterlife Master Bowman", "Knight", "Afterlife Pikeman", "Afterlife Royal Guard", 
-					"Afterlife Halberdier", "Afterlife Duelist", "Afterlife Fencer", "Afterlife Peasant", "Afterlife Woodsman"
+					"Afterlife Halberdier", "Afterlife Duelist", "Afterlife Fencer", "Afterlife Peasant", "Afterlife Woodsman",
+					"Lancer", "Javelineer", "Afterlife Lancer", "Afterlife Javelineer"
                 },
                 
                 -- Standard Steel Colors (based on BASE_LOYALIST_BLUE_STEEL_ARMOUR_COLOR etc.)
