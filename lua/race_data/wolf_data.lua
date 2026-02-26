@@ -1,3 +1,4 @@
+--<<
 --wolf_data 
 local body_parts = {
 	{
@@ -100,3 +101,4 @@ local body_parts = {
 _G.ucv_race_registry["wolf"] = {
     body_parts = body_parts
 }
+-->>

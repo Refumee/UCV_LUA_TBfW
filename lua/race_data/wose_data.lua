@@ -1,3 +1,4 @@
+--<<
 -- wose_data.lua
 local body_parts = {
     {
@@ -60,3 +61,4 @@ local body_parts = {
 _G.ucv_race_registry["wose"] = {
     body_parts = body_parts
 }
+-->>
