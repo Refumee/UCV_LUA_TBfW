@@ -7,7 +7,7 @@ local body_parts = {
             orc = { -- archetype
                 -- Comprehensive list of orcish units from mainline 1.18
                 unit_types = { 
-                    "Orcish Grunt", "Orcish Warrior", "Orcish Warlord", 
+                    "Orcish Grunt", "Orcish Warrior", "Orcish Warlord", "Sea Orc",
                     "Orcish Archer","Orcish Crossbowman", "Orcish Slurbow",
                     "Orcish Leader", "Orcish Ruler", "Orcish Sovereign",
                     "Afterlife Orcish Grunt", "Afterlife Orcish Warrior", "Afterlife Orcish Warlord", 

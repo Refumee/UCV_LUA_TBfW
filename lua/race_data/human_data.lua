@@ -7,7 +7,7 @@ local body_parts = {
             infantry = { -- archetype
                 -- Covers most basic units
                 unit_types = { 
-                    "Battle Princess", "Princess", "Cavalryman", "Horseman", "Dragoon", "Spearman", "Master at Arms", 
+                    "Battle Princess", "Princess", "Warrior Princess", "Bound Princess", "Cavalryman", "Horseman", "Dragoon", "Spearman", "Master at Arms", 
 					"Bowman", "Swordsman", "General", "Longbowman", "Grand Marshal", "Sergeant", "Lieutenant", "Master Bowman", 
 					"Knight", "Pikeman", "Royal Guard", "Halberdier", "Duelist", "Fencer", "Peasant", "Woodsman", 
 					"Afterlife Battle Princess", "Afterlife Princess", "Afterlife Cavalryman", "Afterlife Horseman", 
@@ -128,7 +128,7 @@ local body_parts = {
         data = {
             human = { -- archetype
                 unit_types = { 
-                    "Battle Princess", "Princess", "Cavalryman", "Horseman", "Dragoon", "Spearman", "Master at Arms", 
+                    "Battle Princess", "Princess", "Warrior Princess", "Bound Princess", "Cavalryman", "Horseman", "Dragoon", "Spearman", "Master at Arms", 
 					"Bowman", "Swordsman", "General", "Longbowman", "Grand Marshal", "Sergeant", "Lieutenant", "Master Bowman", 
 					"Knight", "Pikeman", "Royal Guard", "Halberdier", "Duelist", "Fencer", "Peasant", "Woodsman", 
 					"Lancer", "Javelineer", 
