@@ -7,6 +7,8 @@
 -- I. UTILITIES
 --------------------------------------------------------------------------------
 
+local UCV_DEBUG = false  -- Toggle this for weight breakdown in chat
+
 -- Split function for separators (like "--" or ":" in "scales:burner:ALBINO--eyes:burner:ALBINO")
 local function split(str, sep)
     if sep == "" then 
@@ -135,41 +137,53 @@ end
 local function get_weighted_choice(variants, affinity_modifiers, allow_rare, unit, body_part)
     local pool = {}
     local total_weight = 0
+    local debug_logs = {} -- Container for compact debug strings
 	
     for variant, data in pairs(variants) do
 	
-        local weight = data.frequency or 1.0
+        local base_weight = data.frequency or 1.0
+        local affinity_weight = affinity_modifiers[variant] or 0
         
-		-- Apply affinity modifiers from previous parts
-        if affinity_modifiers[variant] then
-			weight = weight + affinity_modifiers[variant] 
-		end
-		
         -- Apply UMC (User Made Content) modifiers from saved WML table
-        local umc_adjustment, override_others = get_umc_modifiers(unit, body_part, variant)
-        if override_others then
-            weight = 0
-        end
-        weight = weight + umc_adjustment
+        local umc_weight, override_others = get_umc_modifiers(unit, body_part, variant)
         
-		if umc_adjustment == 0 and override_others == false and	data.rare and not allow_rare then
-			weight = 0
-		end
-		if umc_adjustment == 0 and override_others == false and	should_exclude(unit) then
-			weight = 0
-		end
+        -- Calculate final weight
+        local weight = base_weight + affinity_weight + umc_weight
+        
+        -- Logic for exclusion/nullification
+        local debug_status = ""
+        if umc_weight == 0 and override_others == true then
+            weight = 0
+            debug_status = " (OVERRIDDEN)"
+        elseif umc_weight == 0 and override_others == false and data.rare and not allow_rare then
+            weight = 0
+            debug_status = " (RARE-DISABLED)"
+        elseif umc_weight == 0 and override_others == false and should_exclude(unit) then
+            weight = 0
+            debug_status = " (EXCLUDED-UNIT)"
+        end
 		
-		-- Add variant to the pool of options
+        -- Add variant to the pool of options
         if weight > 0 then
-            --table.insert(pool, {variant = variant, data = data, weight = weight})
-			table.insert(pool, {variant = variant, frequency = data.frequency, colors = data.colors, weight = weight})
+            table.insert(pool, {variant = variant, frequency = data.frequency, colors = data.colors, weight = weight})
             total_weight = total_weight + weight
         end
 
+        -- Construct debug string for this specific variant
+        if UCV_DEBUG then
+			local entry=""
+			if debug_status~="" then
+				entry = string.format("%s: %s", variant, debug_status)
+			else
+				entry = string.format("%s: %.2f = %.2f + %.2f + %.2f", 
+					variant, weight, base_weight, affinity_weight, umc_weight)
+			end
+            table.insert(debug_logs, entry)
+        end
     end
 	
-    if total_weight <= 0 then 
-		return nil 
+    if total_weight <= 0 then
+		return nil
 	end
 	
 	-- Pick a random variant from the pool and return it
@@ -178,6 +192,11 @@ local function get_weighted_choice(variants, affinity_modifiers, allow_rare, uni
     for _, entry in ipairs(pool) do
         current_sum = current_sum + entry.weight
         if roll <= current_sum then
+            if UCV_DEBUG then
+                local log_line = string.format("<UCV DEBUG:> Body Part: %s , Chosen Variant: %s , List of Variant options (Numbers shown are weights: Total = Base + Affin + UMC) : ||  %s", 
+                    body_part, entry.variant, table.concat(debug_logs, " || "))
+                wesnoth.interface.add_chat_message(log_line)
+            end
 			return entry
 		end
     end
@@ -197,7 +216,7 @@ local function generate_ucv_data(unit, old_variants_map, allow_rare)
     local id_parts = {}
 	
 	-- Iterate body parts (e.g. "scales, weapon ..")
-    for _, body_part_entry in pairs(race_data.body_parts) do
+    for _, body_part_entry in ipairs(race_data.body_parts) do
 		local body_part = body_part_entry.name
 		
 		-- Iterate archetypes (e.g., "glider, fighter ..")
@@ -230,16 +249,20 @@ local function generate_ucv_data(unit, old_variants_map, allow_rare)
                     chosen = { variant = target_variant_id, data = variants[target_variant_id] }
                 else
                     local affinity_mod = affinity_modifiers[body_part] or {}
-                    --chosen = get_weighted_choice(variants, affinity_mod, allow_rare, unit, body_part)
+					
+					-- This sync block executes only on the 'active' player's client.
+					-- It does a random roll to pick the color.
+					-- sync ensures the same color shows for all players
 					local result = wesnoth.sync.evaluate_single(function()
-						-- This only happens on the active player
-						local chosen = get_weighted_choice(variants, affinity_mod, allow_rare, unit, body_part)
-						-- data all sides get
-						return chosen
+						return get_weighted_choice(variants, affinity_mod, allow_rare, unit, body_part)
 					end)
-					local pool = {}
-					table.insert(pool, {variant = result.variant, data = {frequency = result.frequency, colors = result.colors}, weight = result.weight})
-					chosen = pool[1]
+					
+                    if result and result.variant then
+                        chosen = { 
+                            variant = result.variant, 
+                            data = variants[result.variant] 
+                        }
+                    end
                 end
 	
 				--Apply the chosen variant of the body part
