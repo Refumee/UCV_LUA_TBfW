@@ -10,7 +10,8 @@ local body_parts = {
 								"Naga Dirkfang", "Naga Ringcaster", "Naga Ophidian", "Naga Sicarius", "Naga Zephyr", "Afterlife Naga Fighter",
 								"Afterlife Naga Warrior", "Afterlife Naga Myrmidon", "Afterlife Naga Guard", "Afterlife Naga Shield Guard",
 								"Afterlife Naga High Guard", "Afterlife Naga Dirkfang", "Afterlife Naga Ringcaster", "Afterlife Naga Ophidian",
-								"Afterlife Naga Sicarius", "Afterlife Naga Zephyr"
+								"Afterlife Naga Sicarius", "Afterlife Naga Zephyr",
+								"Naga Hunter","Naga Guardian","Naga Warden","Naga Sentinel"
 				},
                 
                 -- Default and randomizer colors (DEFAULT_NAGA_TOP_COLOR_ID)
@@ -23,9 +24,12 @@ local body_parts = {
                 DARK_GREEN = { frequency = 1.0, colors = "86ac53,40513c,324634,2c2e12,4c3324" },
 
                 -- Rare colors
-                WHITE = { frequency = 0.05, rare=true, colors = "d9d9d9,a2a2a2,8c8c8c,8c8c8c,6a6a6a", affinity = {naga_bottom = { BASE = -1.0, CREAM = -1.0, SAND = -1.0, YELLOW = -1.0, PALE_YELLOW = -1.0, GOLD = -1.0, LIGHT_GREEN = -1.0 , WHITE = 1.0 },}},
-                RED_BROWN = { frequency = 0.05, rare=true, colors = "c08656,a55f3c,6a251f,5f1a15,53100b", affinity = {naga_bottom = { BASE = -1.0, CREAM = -1.0, SAND = -1.0, YELLOW = -1.0, PALE_YELLOW = -1.0, GOLD = -1.0, LIGHT_GREEN = -1.0 , TAN = 1.0 },}},
-                BLUE = { frequency = 0.05, rare=true, colors = "90a1bd,50596e,273a48,434962,273541", affinity = {naga_bottom = { BASE = -1.0, CREAM = -1.0, SAND = -1.0, YELLOW = -1.0, PALE_YELLOW = -1.0, GOLD = -1.0, LIGHT_GREEN = -1.0 , LIGHT_BLUE = 1.0 },}},
+                WHITE = { frequency = 0.05, rare=true, colors = "d9d9d9,a2a2a2,8c8c8c,8c8c8c,6a6a6a",
+					affinity = {naga_bottom = {  WHITE = 1000.0 },}},
+                RED_BROWN = { frequency = 0.05, rare=true, colors = "c08656,a55f3c,6a251f,5f1a15,53100b",
+					affinity = {naga_bottom = {TAN = 1000.0 },}},
+                BLUE = { frequency = 0.05, rare=true, colors = "90a1bd,50596e,273a48,434962,273541",
+					affinity = {naga_bottom = { LIGHT_BLUE = 1000.0 },}},
             },
         }
     },
@@ -37,7 +41,8 @@ local body_parts = {
 								"Naga Dirkfang", "Naga Ringcaster", "Naga Ophidian", "Naga Sicarius", "Naga Zephyr", "Afterlife Naga Fighter",
 								"Afterlife Naga Warrior", "Afterlife Naga Myrmidon", "Afterlife Naga Guard", "Afterlife Naga Shield Guard",
 								"Afterlife Naga High Guard", "Afterlife Naga Dirkfang", "Afterlife Naga Ringcaster", "Afterlife Naga Ophidian",
-								"Afterlife Naga Sicarius", "Afterlife Naga Zephyr"
+								"Afterlife Naga Sicarius", "Afterlife Naga Zephyr",
+								"Naga Hunter","Naga Guardian","Naga Warden","Naga Sentinel"
 				},
                 
                 -- Default and randomizer colors (DEFAULT_NAGA_COLOR_ID)

@@ -9,7 +9,8 @@ local body_parts = {
                 unit_types = {	"Saurian Skirmisher", "Saurian Ambusher", "Saurian Spearthrower", "Saurian Javelineer", "Saurian Flanker", "Saurian Augur", "Saurian Soothsayer", "Saurian Oracle", "Saurian Seer", "Saurian Prophet",
 								"Afterlife Saurian Skirmisher", "Afterlife Saurian Ambusher", "Afterlife Saurian Spearthrower", "Afterlife Saurian Javelineer", "Afterlife Saurian Flanker", "Afterlife Saurian Augur",
 								"Afterlife Saurian Soothsayer", "Afterlife Saurian Oracle", "Afterlife Saurian Seer", "Afterlife Saurian Prophet",
-								"Wild Saurian","Beast Saurian"
+								"Wild Saurian","Beast Saurian",
+								"Saurian Devotee","Saurian Juvenile","Saurian Spike"
 				},
                 
                 -- The default/base colors of the unit that we may want to change.
