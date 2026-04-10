@@ -5,7 +5,7 @@ local body_parts = {
         name = "gryphon_body", -- body_part (Main metal armor)
         data = {
 			feather = { -- archetype
-                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master" },
+                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master","Sleeping Gryphon" },
 				-- The default/base colors of the unit that we may want to change.
 				BASE = { frequency = 0.0, colors = "E0C3A2,BEA18B,AF937F,83675E,795332,543638,3B232B" },
 				DEFAULT_GRYPHON_BODY = { frequency = 1.0, colors = "E0C3A2,BEA18B,AF937F,83675E,795332,543638,3B232B" },
@@ -16,6 +16,33 @@ local body_parts = {
 				GRYPHON_BODY_COOL = { frequency = 1.0, colors = "D1C7B1,AF9F92,9EA090,786C6A,6B5242,4A3940,31232B" },
 				GRYPHON_BODY_SATURATED = { frequency = 1.0, colors = "F2C596,D1A280,C48F70,996A5C,8C552B,66363B,47212A" },
 				GRYPHON_BODY_MUTED = { frequency = 1.0, colors = "D1C6BD,B0A8A2,A19A95,75706E,695B50,4A4042,332A2E" },
+				GRYPHON_BODY_GRYPHLET = { frequency = 1.0, colors = "D7D7D7,B8B8B8,AAAAAA,7B7B7B,707070,484848,2E2E2E" },
+				-- rare
+				GRYPHON_BODY_SNOW = { frequency = 0.05, rare=true, colors = "FEFFFF,E6ECEF,C0CDDA,9CA8B5,768699,4F6075,2A374A",
+					affinity = {gryhon_head = { GRYPHON_HEAD_SNOW = 1000.0 },}},
+				GRYPHON_BODY_OBSIDIAN = { frequency = 0.05, rare=true, colors = "8A8A9E,656578,4C4C5C,363645,242430,15151F,08080C",
+					affinity = {gryhon_head = { GRYPHON_HEAD_OBSIDIAN = 1000.0 },}},
+				GRYPHON_BODY_DESERT = { frequency = 0.05, rare=true, colors = "FFE599,EBC573,D1A24B,B37E29,8A5B1C,5C380E,331A05",
+					affinity = {gryhon_head = { GRYPHON_HEAD_DESERT = 1000.0 },}},
+            }
+		}
+	},
+    {
+        name = "gryphon_body_gryphlet", -- body_part (Main metal armor)
+        data = {
+			feather = { -- archetype
+                unit_types = { "Gryphlet" },
+				-- The default/base colors of the unit that we may want to change.
+				BASE = { frequency = 0.0, colors = "D7D7D7,B8B8B8,AAAAAA,7B7B7B,707070,484848,2E2E2E" },
+				DEFAULT_GRYPHON_BODY = { frequency = 1.0, colors = "E0C3A2,BEA18B,AF937F,83675E,795332,543638,3B232B" },
+
+				GRYPHON_BODY_LIGHT = { frequency = 1.0, colors = "F5DCC0,D4B9A4,C4AA97,9E8177,946D4B,6B4A4C,4F353E" },
+				GRYPHON_BODY_DARK = { frequency = 0.5, colors = "C2A889,A18774,917967,6B534B,5E3F25,40282A,26151B" },
+				GRYPHON_BODY_WARM = { frequency = 0.5, colors = "E8BA9D,C99680,BD8675,915951,874328,612C2F,451D24" },
+				GRYPHON_BODY_COOL = { frequency = 1.0, colors = "D1C7B1,AF9F92,9EA090,786C6A,6B5242,4A3940,31232B" },
+				GRYPHON_BODY_SATURATED = { frequency = 1.0, colors = "F2C596,D1A280,C48F70,996A5C,8C552B,66363B,47212A" },
+				GRYPHON_BODY_MUTED = { frequency = 1.0, colors = "D1C6BD,B0A8A2,A19A95,75706E,695B50,4A4042,332A2E" },
+				GRYPHON_BODY_GRYPHLET = { frequency = 1.0, colors = "D7D7D7,B8B8B8,AAAAAA,7B7B7B,707070,484848,2E2E2E" },
 				-- rare
 				GRYPHON_BODY_SNOW = { frequency = 0.05, rare=true, colors = "FEFFFF,E6ECEF,C0CDDA,9CA8B5,768699,4F6075,2A374A",
 					affinity = {gryhon_head = { GRYPHON_HEAD_SNOW = 1000.0 },}},
@@ -30,7 +57,7 @@ local body_parts = {
         name = "gryhon_head", -- body_part (Main metal armor)
         data = {
 			head = { -- archetype
-                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master" },
+                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master","Sleeping Gryphon","Gryphlet" },
 				-- The default/base colors of the unit that we may want to change.
 				BASE = { frequency = 0.0, colors = "F8EDC5,A8A098,585858,4E3A2D" },
 				DEFAULT_GRYPHON_HEAD = { frequency = 1.0, colors = "F8EDC5,A8A098,585858,4E3A2D" },
@@ -55,7 +82,7 @@ local body_parts = {
         name = "gryphon_peak", -- body_part (Main metal armor)
         data = {
 			peak = { -- archetype
-                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master" },
+                unit_types = { "Gryphon","Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master","Sleeping Gryphon","Gryphlet" },
 				-- The default/base colors of the unit that we may want to change.
 				BASE = { frequency = 0.0, colors = "EDC66D,CF804D,823F1E" },
 				DEFAULT_GRYPHON_PEAK = { frequency = 1.0, colors = "EDC66D,CF804D,823F1E" },
