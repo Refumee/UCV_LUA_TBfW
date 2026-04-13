@@ -8,7 +8,7 @@ local body_parts = {
                 -- List of unit types that fit into the archtype
                 unit_types = {	"Troll", "Troll Whelp", "Troll Rocklobber", "Troll Warrior", "Great Troll", "Troll Shaman", "Troll Hero",
 								"Afterlife Troll", "Afterlife Troll Whelp", "Afterlife Troll Rocklobber", "Afterlife Troll Warrior", "Great Afterlife Troll", "Afterlife Troll Shaman", "Afterlife Troll Hero",
-								"Troll Initiate","Troll Earth-Shaker"
+								"Troll Initiate","Troll Earth-Shaker","Strong Troll Whelp"
 				},
                 
                 -- The default/base colors of the unit that we may want to change.
