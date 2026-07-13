@@ -8,10 +8,8 @@ local body_parts = {
                 unit_types = {	"Dwarvish Ulfserker", "Dwarvish Berserker",
 								"Dwarvish Thunderer", "Dwarvish Thunderguard", "Dwarvish Dragonguard",
 								"Dwarvish Fighter", "Dwarvish Steelclad", "Dwarvish Lord",
-								"Dwarvish Guardsman", "Dwarvish Stalwart", "Dwarvish Sentinel",
 								"Dwarvish Scout", "Dwarvish Pathfinder", "Dwarvish Explorer",
 								"Dwarvish Runesmith", "Dwarvish Runemaster", "Dwarvish Arcanister",
-								"Dwarvish Miner",
 								"Dwarvish Witness", "Dwarvish Annalist", "Dwarvish Loremaster",
 								"Dwarvish Rune Lord", "Undead Dwarvish Rune Lord"
 				},
@@ -22,12 +20,51 @@ local body_parts = {
 				DWARF_ARMOUR_RUNESMITH = { frequency = 1.0, colors = "FFFFFF,B1EBEC,79A9B3,4F6973,31526B,21353E" },
 				--gryphonrider/thunderer/scout
 				DWARF_ARMOUR_GRYPHONRIDER = { frequency = 0.5, colors = "FFFFFF,CDDACE,9BB59D,6A8E7E,2D4A4F,21353E" },
-				DWARF_ARMOUR_GRYPHONRIDER = { frequency = 0.5, colors = "FFFFFF,98CFC4,9BB59D,6A8E7E,2D4A4F,21353E" },
+				DWARF_ARMOUR_THUNDERER = { frequency = 0.5, colors = "FFFFFF,98CFC4,9BB59D,6A8E7E,2D4A4F,21353E" },
 				DWARF_ARMOUR_MINER = { frequency = 1.0, colors = "CADAD7,9E948D,747171,4A5668,3A3A50,2C1D2B" },
 				DWARF_ARMOUR_GUARD = { frequency = 1.0, colors = "DAB0A4,A8A098,8A766D,4E3A2D,352419,271A11" },
 				DWARF_ARMOUR_SENTINEL = { frequency = 1.0, colors = "B1EBEC,8ABCB8,58808D,26446D,21353E,1C2123" },
 				DWARF_ARMOUR_WITNESS = { frequency = 0.05, colors = "FFFFFF,B1EBEC,79A9B3,507059,4F6973,1E3038" },
 				DWARF_ARMOUR_KARRAG = { frequency = 0.05, colors = "DBE6E8,ADCCD2,6799A2,3B6C75,524855,182931" }
+            },
+			miner = { -- archetype
+                unit_types = {	"Dwarvish Miner"},
+				-- The default/base colors of the unit that we may want to change.
+				BASE = { frequency = 0.0, colors = "CADAD7,9E948D,747171,4A5668,3A3A50,2C1D2B" },
+				DWARF_ARMOUR_MINER = { frequency = 3.0, colors = "CADAD7,9E948D,747171,4A5668,3A3A50,2C1D2B" },
+				DWARF_ARMOUR_GUARD = { frequency = 1.0, colors = "DAB0A4,A8A098,8A766D,4E3A2D,352419,271A11" },
+				HEAVY_INFANTERY = { frequency = 1.0, colors = "ececec,a8a098,78655a,4d4541,2c2623,191919" },
+				BANNERET = { frequency = 1.0, colors = "ececec,ccc2b9,a8a098,686058,524e46,3d3a37" },
+
+				DWARF_ARMOUR_KARRAG = { frequency = 0.05, rare=true,colors = "DBE6E8,ADCCD2,6799A2,3B6C75,524855,182931" }
+            },
+			guard = { -- archetype
+                unit_types = {	"Dwarvish Guardsman"},
+				-- The default/base colors of the unit that we may want to change.
+				BASE = { frequency = 0.0, colors = "DAB0A4,A8A098,8A766D,4E3A2D,352419,271A11" },
+
+				DWARF_ARMOUR_MINER = { frequency = 1.0, colors = "CADAD7,9E948D,747171,4A5668,3A3A50,2C1D2B" },
+				DWARF_ARMOUR_GUARD = { frequency = 1.0, colors = "DAB0A4,A8A098,8A766D,4E3A2D,352419,271A11" },
+				DWARF_ARMOUR_SENTINEL = { frequency = 1.0, colors = "B1EBEC,8ABCB8,58808D,26446D,21353E,1C2123" },
+				DWARF_ARMOUR_KARRAG = { frequency = 1.0, colors = "DBE6E8,ADCCD2,6799A2,3B6C75,524855,182931" },
+				HEAVY_INFANTERY = { frequency = 1.0, colors = "ececec,a8a098,78655a,4d4541,2c2623,191919" },
+				SIR_GERRIK = { frequency = 1.0, colors = "c3d2ef,9faecb,697895,3d4e69,293a55,11203d" },
+				DARDO = { frequency = 1.0, colors = "eacfc2,bd9785,8b6c71,593a3f,33282a,1f1f1a" },
+				TROLL_GRUU = { frequency = 1.0, colors = "d3bcc1,a8a8a8,817d71,635054,454133,172830" },
+            },
+			sentinel = { -- archetype
+                unit_types = {	 "Dwarvish Stalwart", "Dwarvish Sentinel",},
+				-- The default/base colors of the unit that we may want to change.
+				BASE = { frequency = 0.0, colors = "B1EBEC,8ABCB8,58808D,26446D,21353E,1C2123" },
+
+				DWARF_ARMOUR_MINER = { frequency = 1.0, colors = "CADAD7,9E948D,747171,4A5668,3A3A50,2C1D2B" },
+				DWARF_ARMOUR_GUARD = { frequency = 1.0, colors = "DAB0A4,A8A098,8A766D,4E3A2D,352419,271A11" },
+				DWARF_ARMOUR_SENTINEL = { frequency = 1.0, colors = "B1EBEC,8ABCB8,58808D,26446D,21353E,1C2123" },
+				DWARF_ARMOUR_KARRAG = { frequency = 1.0, colors = "DBE6E8,ADCCD2,6799A2,3B6C75,524855,182931" },
+				HEAVY_INFANTERY = { frequency = 1.0, colors = "ececec,a8a098,78655a,4d4541,2c2623,191919" },
+				SIR_GERRIK = { frequency = 1.0, colors = "c3d2ef,9faecb,697895,3d4e69,293a55,11203d" },
+				DARDO = { frequency = 1.0, colors = "eacfc2,bd9785,8b6c71,593a3f,33282a,1f1f1a" },
+				TROLL_GRUU = { frequency = 1.0, colors = "d3bcc1,a8a8a8,817d71,635054,454133,172830" },
             }
 		}
 	},
