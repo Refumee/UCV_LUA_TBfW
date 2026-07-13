@@ -158,6 +158,102 @@ local body_parts = {
             },
         }
     },
+    {
+        name = "mage_cloth", -- body_part (Leather components)
+        data = {
+            mage = { -- archetype
+                unit_types = { "Mage", "Afterlife Mage", "Red Mage", "Afterlife Red Mage", "Malin Keshar", "Apprentice Mage" },
+				
+                BASE = { frequency = 0.0, colors = "b18134,8a5c2f,75462F,4e3430,2D2410" },
+                BROWN = { frequency = 2.0, colors = "b18134,8a5c2f,75462F,4e3430,2D2410" },
+                DARK_OLIVE = { frequency = 1.0, colors = "A4977E,847860,635841,4B402B,2D2410" },
+                TAN = { frequency = 1.0, colors = "cabca2,a4977e,847860,635841,4b402b" },
+                DARK_BROWN = { frequency = 1.0, colors = "826e2f,75491e,47213c,47213c,3F1519" },
+				PALE_BROWN = { frequency = 1.0, colors = "D4AE76,A78053,705638,384B47,212121" },
+                LIGHT_BROWN = { frequency = 1.0, colors = "C5956A,A9794F,876246,876246,4E3430" },
+                
+                WHITE = { frequency = 0.2, rare=true, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+                GREY_GREEN = { frequency = 0.2, rare=true, colors = "a5b89c,889880,506858,506858,283028" },
+                GREY = { frequency = 0.2, rare=true, colors = "576d6d,8a7d5d,593f33,593f33,221e23" },
+                BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
+            },
+            archmage = { -- archetype
+                unit_types = { "Arch Mage", "Afterlife Arch Mage", "Great Mage", "Afterlife Great Mage" },
+                
+                BASE = { frequency = 0.0, colors = "cabca2,a4977e,847860,635841,4b402b" },
+                BROWN = { frequency = 2.0, colors = "b18134,8a5c2f,75462F,4e3430,2D2410" },
+                DARK_OLIVE = { frequency = 1.0, colors = "A4977E,847860,635841,4B402B,2D2410" },
+                TAN = { frequency = 1.0, colors = "cabca2,a4977e,847860,635841,4b402b" },
+                DARK_BROWN = { frequency = 1.0, colors = "826e2f,75491e,47213c,47213c,3F1519" },
+				PALE_BROWN = { frequency = 1.0, colors = "D4AE76,A78053,705638,384B47,212121" },
+                LIGHT_BROWN = { frequency = 1.0, colors = "C5956A,A9794F,876246,876246,4E3430" },
+                
+                WHITE = { frequency = 0.2, rare=true, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+                GREY_GREEN = { frequency = 0.2, rare=true, colors = "a5b89c,889880,506858,506858,283028" },
+                GREY = { frequency = 0.2, rare=true, colors = "576d6d,8a7d5d,593f33,593f33,221e23" },
+                BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
+            },
+            silvermage = { -- archetype
+                unit_types = { "Silver Mage", "Afterlife Silver Mage" },
+                
+                BASE = { frequency = 0.0, colors = "C0D7E0,90B3C0,7EA0A0,69788A,384062" },
+                BROWN = { frequency = 1.0, colors = "b18134,8a5c2f,75462F,4e3430,2D2410" },
+                DARK_OLIVE = { frequency = 1.0, colors = "A4977E,847860,635841,4B402B,2D2410" },
+                TAN = { frequency = 1.0, colors = "cabca2,a4977e,847860,635841,4b402b" },
+                DARK_BROWN = { frequency = 1.0, colors = "826e2f,75491e,47213c,47213c,3F1519" },
+				PALE_BROWN = { frequency = 1.0, colors = "D4AE76,A78053,705638,384B47,212121" },
+                LIGHT_BROWN = { frequency = 1.0, colors = "C5956A,A9794F,876246,876246,4E3430" },
+                
+                WHITE = { frequency = 2.2, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+                GREY_GREEN = { frequency = 0.2, rare=true, colors = "a5b89c,889880,506858,506858,283028" },
+                GREY = { frequency = 0.2, rare=true, colors = "576d6d,8a7d5d,593f33,593f33,221e23" },
+                BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
+            },
+            whitemage = { -- white mage doesnt get randomised, also mages what do level up into a white mage just turn white. Therefore all the colors here are the same.
+                unit_types = { "White Mage", "Afterlife White Mage", "Mage of Light", "Mage of Light", "Dacyn L2", "Dacyn L3", "Fallen Mage", "Twilight Mage" },
+				
+                BASE = { frequency = 0.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                BROWN = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                DARK_OLIVE = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                TAN = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                DARK_BROWN = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+				PALE_BROWN = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                LIGHT_BROWN = { frequency = 1.0, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                
+                WHITE = { frequency = 0.2, rare=true, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                GREY_GREEN = { frequency = 0.2, rare=true, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                GREY = { frequency = 0.2, rare=true, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+                BLACK = { frequency = 0.2, rare=true, colors = "F8F8F8,C0D7E0,90B3C0,607B90,425361" },
+            },
+            roguemage = { -- archetype
+                unit_types = { "Rogue Mage", "Arcane Enforcer", "Shadow Mage", "Shadow Lord" },
+                
+                BASE = { frequency = 0.0, colors = "636363,474747,3D3D00,2B281D,152114" },
+                BLACK = { frequency = 3.0, colors = "636363,474747,3D3D00,2B281D,152114" },
+                GREY = { frequency = 1.5, colors = "576d6d,8a7d5d,593f33,593f33,221e23" },
+                BLUE = { frequency = 1.0, colors = "50596e,273541,273a48,273a48,1d2336" },
+                DARK_GREY = { frequency = 1.0, colors = "D3CBBB,8A949F,7A7A7A,3C454F,182830" },
+                
+                GREEN = { frequency = 0.2, rare=true, colors = "B8A641,798D63,535E2D,535E2D,303313" },
+                GREY_GREEN = { frequency = 0.2, rare=true, colors = "a5b89c,889880,506858,506858,283028" },
+                BROWN = { frequency = 0.2, rare=true, colors = "b18134,8a5c2f,75462F,4e3430,2D2410" },
+                WHITE = { frequency = 0.2, rare=true, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+            },
+            darkadept = { -- archetype
+                unit_types = { "Dark Adept", "Dark Sorcerer", "Necromancer", "Afterlife Dark Adept", "Afterlife Dark Sorcerer", "Afterlife Necromancer", "MalinNecromancer", "MalinDarkMage", "Apprentice Necromancer", "Dark Mage" },
+                
+                BASE = { frequency = 0.0, colors = "a5b89c,889880,506858,283028" },
+                GREY_GREEN = { frequency = 2.0, colors = "a5b89c,889880,506858,283028" }, -- default color
+                GREY_GREEN_LIGHT_1 = { frequency = 1.0, colors = "BED1B5,A1B199,698171,414941" },
+				GREY_GREEN_DARK_1 = { frequency = 1.0, colors = "8C9F83,6F7F67,374F3F,0F170F" },
+				GREY_GREEN_DARK_2 = { frequency = 1.0, colors = "7D9074,607058,284030,080A08" },
+                
+                WHITE = { frequency = 0.2, rare=true, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+                TAN = { frequency = 0.2, rare=true, colors = "D5D3A1,A09F84,7F7165,453843" },
+                BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
+            },
+        }
+    },
 }
 
 _G.ucv_race_registry["human"] = {

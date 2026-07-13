@@ -109,6 +109,25 @@ local body_parts = {
                 BONE_ICY = { frequency = 0.05, rare=true, colors = "F2FFFF,BFFFED,9AC2B4,617FB1,3E4F6C" },
 			},
         }
+    },
+    {
+        name = "mage_cloth", -- body_part
+        data = {
+            lich = { -- archtype
+                unit_types = {	"Lich","Ancient Lich","Afterlife Lich","Afterlife Ancient Lich",
+								"Dread Lich","SotA Ancient Lich","SotA Lich","Jevyan","Jevyan Cloaked","Mal Keshar"},
+                -- The default/base colors of the unit that we may want to change.
+                BASE = { frequency = 0.0, colors = "a5b89c,889880,506858,283028" },
+                GREY_GREEN = { frequency = 2.0, colors = "a5b89c,889880,506858,283028" }, -- default color
+                GREY_GREEN_LIGHT_1 = { frequency = 1.0, colors = "BED1B5,A1B199,698171,414941" },
+				GREY_GREEN_DARK_1 = { frequency = 1.0, colors = "8C9F83,6F7F67,374F3F,0F170F" },
+				GREY_GREEN_DARK_2 = { frequency = 1.0, colors = "7D9074,607058,284030,080A08" },
+                
+                WHITE = { frequency = 0.2, rare=true, colors = "C0D7E0,90B3C0,607B90,607B90,425361" },
+                TAN = { frequency = 0.2, rare=true, colors = "D5D3A1,A09F84,7F7165,453843" },
+                BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
+            },
+        }
     }
 }
 

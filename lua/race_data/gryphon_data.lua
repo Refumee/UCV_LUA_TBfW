@@ -126,7 +126,7 @@ local body_parts = {
 		data = {	
 			dwarf_rider = { -- archtype
 				unit_types = {	"Gryphon Rider","Gryphon Master", "Afterlife Gryphon Rider", "Afterlife Gryphon Master"	},
-				BASE = { frequency = 0.0, colors = "E08B7A,B14B4B,8B3219,592010" },
+				BASE = { frequency = 0.0, colors = "DBBEA4,B1937F,8B4E0D,592820" },
 				--Default dwarf beard (Miner)
 				DWARF_BEARD_DEFAULT = { frequency = 1.0, colors = "E08B7A,B14B4B,8B3219,592010" },
 
