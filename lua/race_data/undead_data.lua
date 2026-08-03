@@ -128,6 +128,25 @@ local body_parts = {
                 BLACK = { frequency = 0.2, rare=true, colors = "636363,474747,3D3D00,2B281D,152114" },
             },
         }
+    },
+	{
+        name = "ghoul_body", -- body_part
+        data = {
+            lich = { -- archtype
+                unit_types = {	"Ghoul","Necrophage","Ghast","Afterlife Ghoul","Afterlife Necrophage","Afterlife Ghast",
+				"Ghast DiD","Ghast Necron","Ghoul DiD","Necrophage DiD","Necrophage Necron"},
+                -- The default/base colors of the unit that we may want to change.
+                BASE = { frequency = 0.0, colors = "DCF6AF,D6D69C,DBBEA8,C6B67F,AC8C6D,806A4E,756300,394909,2C1D13,1B2923,612A17" },
+                GREEN_BROWN = { frequency = 2.0, colors = "DCF6AF,D6D69C,DBBEA8,C6B67F,AC8C6D,806A4E,756300,394909,2C1D13,1B2923,612A17" }, -- default color
+                GREEN_BROWN_LIGHT_1 = { frequency = 1.0, colors = "E5F9C2,DEDEAA,E5CCCB,D1C18D,B8987B,8E7659,85710A,485816,39291D,1B2923,6E311B" },
+				GREEN_BROWN_DARK_1 = { frequency = 1.0, colors = "C1D99A,BCBD89,C1A794,AEA06F,977A5F,705D44,665600,303E06,24170E,1B2923,542413" },
+				GREEN_BROWN_DARK_2 = { frequency = 1.0, colors = "A4B883,A0A074,A48E7E,94885C,816851,604F3A,574A00,2A3703,1D1007,1B2923,471E10" },
+                
+                DARK_BROWN = { frequency = 0.5, rare=true, colors = "D0E89B,BACFA8,9FA87F,7F8259,5F5B36,403B20,292412,141108,0A0904,0A0904,40220F" },
+                BROWN = { frequency = 0.2, rare=true, colors = "FFEED4,E3CBA8,C4A67E,A68356,856236,63441F,42290D,241403,120A01,120A01,47260B" },
+                GREY_BROWN = { frequency = 0.2, rare=true, colors = "FFF2F5,EBE0E3,D1C1C5,B5A1A7,968087,756067,544248,332429,1A1214,1A1214,4A2D37" },
+            },
+        }
     }
 }
 
