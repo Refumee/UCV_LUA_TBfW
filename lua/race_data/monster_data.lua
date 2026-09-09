@@ -29,6 +29,7 @@ local body_parts = {
     },
     {
         name = "horn", -- body_part
+		data = {
             tauroch = { -- archetype
                 unit_types = {	"Tauroch"	},
                 
