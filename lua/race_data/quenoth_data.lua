@@ -16,9 +16,10 @@ local body_parts = {
 
             },
             fighter = { -- archetype
-                unit_types = {	"Quenoth Fighter","Quenoth Warrior","Quenoth Champion",
+                unit_types = {	"Quenoth Fighter","Quenoth Fighter1","Quenoth Fighter2","Quenoth Fighter3","Quenoth Fighter4","Quenoth Fighter5","Quenoth Fighter6","Quenoth Fighter7","Quenoth Fighter8","Quenoth Fighter9","Quenoth Fighter10",
+								"Quenoth Warrior","Quenoth Champion",
 								"Quenoth Flanker","Quenoth Ranger",
-								"Quenoth Scout","Quenoth Pathfinder","Quenoth Outrider" },
+								"Quenoth Scout","Quenoth Scout1","Quenoth Scout2","Quenoth Scout3","Quenoth Scout4","Quenoth Scout5","Quenoth Scout6","Quenoth Scout7","Quenoth Scout8","Quenoth Scout9","Quenoth Scout10","Quenoth Pathfinder","Quenoth Outrider" },
 
 				BASE = { frequency = 0.0, colors = "EDDDC8,C1B69A,A1966F,827A54,6C6344,574D34,382800" },
 				TAN = { frequency = 1.0, colors = "F8F0E4,D4C29B,BCAE7E,A1966F,8E755C,705B49,534338" },
@@ -27,7 +28,7 @@ local body_parts = {
 				DARK_BROWN = { frequency = 0.5,  colors = "A08662,8D765C,796755,5E5044,423934,322A27,221C1A" },
 			},
             mystic = { -- archetype
-                unit_types = {	"Quenoth Mystic","Quenoth Shaman","Quenoth Druid"	},
+                unit_types = {	"Quenoth Mystic","Quenoth Mystic1","Quenoth Mystic2","Quenoth Mystic3","Quenoth Mystic4","Quenoth Mystic5","Quenoth Mystic6","Quenoth Mystic7","Quenoth Mystic8","Quenoth Mystic9","Quenoth Mystic10","Quenoth Shaman","Quenoth Druid"	},
  
 				BASE = { frequency = 0.0, colors = "F1D8B3,D1B6A3,BCAE7E,A1966F,8E755C,705B49,534338" },
 				TAN = { frequency = 1.0, colors = "F1D8B3,D1B6A3,BCAE7E,A1966F,8E755C,705B49,534338" },
@@ -65,7 +66,8 @@ local body_parts = {
         name = "redarmour", -- body_part
         data = {
             fighter = { -- archetype
-                unit_types = {	"Quenoth Fighter","Quenoth Warrior","Quenoth Champion",
+                unit_types = {	"Quenoth Fighter","Quenoth Fighter1","Quenoth Fighter2","Quenoth Fighter3","Quenoth Fighter4","Quenoth Fighter5","Quenoth Fighter6","Quenoth Fighter7","Quenoth Fighter8","Quenoth Fighter9","Quenoth Fighter10",
+								"Quenoth Warrior","Quenoth Champion",
 								"Quenoth Flanker","Quenoth Ranger" },
 
 				-- Lighter Variants (Stronger Contrast)
@@ -85,7 +87,7 @@ local body_parts = {
         name = "bluearmour", -- body_part
         data = {
             fighter = { -- archetype
-                unit_types = {	"Tauroch Rider",
+                unit_types = {	"Tauroch Rider","Tauroch Rider1","Tauroch Rider2","Tauroch Rider3","Tauroch Rider4","Tauroch Rider5","Tauroch Rider6","Tauroch Rider7","Tauroch Rider8","Tauroch Rider9","Tauroch Rider10",
 								"Tauroch Vanguard","Tauroch Flagbearer",
 								"Tauroch Stalwart","Tauroch Protector" },
 
@@ -106,7 +108,7 @@ local body_parts = {
         name = "mount", -- body_part
         data = {
             tauroch = { -- archetype
-                unit_types = {	"Tauroch Rider",
+                unit_types = {	"Tauroch Rider","Tauroch Rider1","Tauroch Rider2","Tauroch Rider3","Tauroch Rider4","Tauroch Rider5","Tauroch Rider6","Tauroch Rider7","Tauroch Rider8","Tauroch Rider9","Tauroch Rider10",
 								"Tauroch Vanguard","Tauroch Flagbearer",
 								"Tauroch Stalwart","Tauroch Protector"	},
  
@@ -119,7 +121,7 @@ local body_parts = {
 
             },
             dustbok = { -- archetype
-                unit_types = {	"Quenoth Scout",
+                unit_types = {	"Quenoth Scout","Quenoth Scout1","Quenoth Scout2","Quenoth Scout3","Quenoth Scout4","Quenoth Scout5","Quenoth Scout6","Quenoth Scout7","Quenoth Scout8","Quenoth Scout9","Quenoth Scout10",
 								"Quenoth Archer","Quenoth Marksman",
 								"Quenoth Outrider","Quenoth Pathfinder" },
 
@@ -136,7 +138,7 @@ local body_parts = {
         name = "horn", -- body_part
         data = {
             tauroch = { -- archetype
-                unit_types = {	"Tauroch Rider",
+                unit_types = {	"Tauroch Rider","Tauroch Rider1","Tauroch Rider2","Tauroch Rider3","Tauroch Rider4","Tauroch Rider5","Tauroch Rider6","Tauroch Rider7","Tauroch Rider8","Tauroch Rider9","Tauroch Rider10",
 								"Tauroch Vanguard","Tauroch Flagbearer",
 								"Tauroch Stalwart","Tauroch Protector"	},
 
@@ -148,7 +150,7 @@ local body_parts = {
 
             },
             dustbok = { -- archetype
-                unit_types = {	"Quenoth Scout",
+                unit_types = {	"Quenoth Scout","Quenoth Scout1","Quenoth Scout2","Quenoth Scout3","Quenoth Scout4","Quenoth Scout5","Quenoth Scout6","Quenoth Scout7","Quenoth Scout8","Quenoth Scout9","Quenoth Scout10",
 								"Quenoth Archer","Quenoth Marksman",
 								"Quenoth Outrider","Quenoth Pathfinder" },
                 
